@@ -4,7 +4,7 @@ import 'package:flutter_movil2/view/login.dart';
 import 'package:flutter_gemini/flutter_gemini.dart';
 
 void main() {
-  Gemini.init(apiKey: 'AIzaSyAHLVDIR8DJM7iTegI-8eVSDf-bkw2uo9Q');
+  Gemini.init(apiKey: 'apikey');
   runApp(const MyApp());
 }
 
