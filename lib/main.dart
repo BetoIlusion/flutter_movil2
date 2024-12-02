@@ -1,20 +1,25 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_movil2/exports.dart';
+import 'package:flutter_movil2/view/login.dart';
+import 'package:flutter_gemini/flutter_gemini.dart';
 
 void main() {
-  runApp(const MainApp());
+  Gemini.init(apiKey: 'AIzaSyAHLVDIR8DJM7iTegI-8eVSDf-bkw2uo9Q');
+  runApp(const MyApp());
 }
 
-class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
+    return MaterialApp(
+      title: 'Learning English',
+      debugShowCheckedModeBanner: false,
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: LoginScreen(), // Usamos la vista HomeView como pantalla inicial
     );
   }
 }
